@@ -377,6 +377,8 @@
       .payment-row:last-child { border-bottom: none; }
       .payment-row .pay-label { font-weight: 600; min-width: 140px; color: #444; }
       .payment-row .pay-value { color: #222; min-width: 0; overflow-wrap: anywhere; }
+      .qr-wrap { margin-bottom: 1.25rem; }
+      .qr-code { width: 180px; max-width: 100%; height: auto; border: 3px solid #f0c000; border-radius: 8px; padding: 6px; background: #fff; }
       @media (max-width: 767px) { #donate { padding: 50px 0; } .payment-box { padding: 1.5rem 1rem; } .payment-row { flex-direction: column; align-items: flex-start; } }
 
       /* Join Us */
@@ -913,14 +915,18 @@
         <div class="col-md-8">
           <div class="payment-box">
             <h4 class="text-center">Payment Details</h4>
+            <div class="qr-wrap text-center">
+              <img src="images/QR.jpeg" alt="UPI QR Code" class="qr-code">
+            </div>
             <div class="payment-row">
               <span class="pay-label"><span class="icon-phone mr-2"></span>UPI ID</span>
-              <span class="pay-value">yellowbrigade@upi</span>
+              <span class="pay-value">trupti5@ybl</span>
             </div>
             <div class="payment-row">
               <span class="pay-label"><span class="icon-person mr-2"></span>Account Name</span>
-              <span class="pay-value">Yellow Brigade Welfare Trust</span>
+              <span class="pay-value">Trupti Nanda</span>
             </div>
+            <p class="text-center mt-3 mb-0" style="font-size:0.9rem; color:#a67c00; font-weight:600;">Please add a message "YellowBrigade" while making any UPI donations.</p>
             <!--
             <div class="payment-row">
               <span class="pay-label"><span class="icon-map-marker mr-2"></span>Bank Name</span>
