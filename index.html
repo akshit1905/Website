@@ -377,6 +377,21 @@
       .qr-code { width: 180px; max-width: 100%; height: auto; border: 3px solid #f0c000; border-radius: 8px; padding: 6px; background: #fff; }
       @media (max-width: 767px) { #donate { padding: 50px 0; } .payment-box { padding: 1.5rem 1rem; } .payment-row { flex-direction: column; align-items: flex-start; } }
 
+      /* Supporter slideshow */
+      .supporters { max-width: 760px; margin: 4rem auto 0; text-align: center; }
+      .supporters h3 { font-weight: 700; }
+      .supporter-stage { margin-top: 1.5rem; padding: 2rem 1.5rem; border: 1px solid #f0e080; border-radius: 10px; background: #fffbea; }
+      .supporter-slide { min-height: 130px; overflow-wrap: anywhere; }
+      .supporter-slide[hidden] { display: none; }
+      .supporter-slide .icon-heart { display: block; color: #a67c00; font-size: 1.7rem; margin-bottom: 0.5rem; }
+      .supporter-slide h4 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+      .supporter-slide p { color: #555; margin-bottom: 0; }
+      .supporter-controls { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin-top: 1.25rem; }
+      .supporter-controls[hidden] { display: none; }
+      .supporter-controls button { min-height: 44px; padding: 6px 14px; border: 1px solid #d6bb57; border-radius: 6px; background: #fff; color: #333; cursor: pointer; }
+      .supporter-controls button:hover { background: #fffbea; }
+      .supporter-controls button:focus-visible { outline: 3px solid #a67c00; outline-offset: 3px; }
+
       /* Join Us */
       #joinus { padding: 80px 0; background: #f8f9fa; }
       .joinus-img { width: 100%; height: 380px; object-fit: cover; border-radius: 8px; }
@@ -542,6 +557,22 @@
           <img src="images/breakfast_aiims_2.jpeg" alt="Breakfast distribution at AIIMS, photo 2">
           <div class="overlay-icon"><span class="icon-search"></span></div>
         </a>
+        <a href="images/oct4_0.jpeg" class="gallery-item image-popup">
+          <img src="images/oct4_0.jpeg" alt="Event 1" class="event-img">
+          <div class="overlay-icon"><span class="icon-search"></span></div>
+        </a>
+        <a href="images/oct4_1.jpeg" class="gallery-item image-popup">
+          <img src="images/oct4_1.jpeg" alt="Event 2" class="event-img">
+          <div class="overlay-icon"><span class="icon-search"></span></div>
+        </a>
+        <a href="images/oct4_2.mp4" class="gallery-item image-popup">
+          <img src="images/oct4_2.mp4" alt="Event 3" class="event-img">
+          <div class="overlay-icon"><span class="icon-search"></span></div>
+        </a>
+        <a href="images/oct4_3.mp4" class="gallery-item image-popup">
+          <img src="images/oct4_3.mp4" alt="Event 3" class="event-img">
+          <div class="overlay-icon"><span class="icon-search"></span></div>
+        </a>
           <button type="button" class="gallery-arrow gallery-prev" aria-label="Previous photo">&#8249;</button>
           <button type="button" class="gallery-arrow gallery-next" aria-label="Next photo">&#8250;</button>
         </div>
@@ -567,6 +598,19 @@
       </div>
       <h5 class="events-sub-heading">Past Events</h5>
       <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="event-card">
+            <img src="images/oct4_0.jpeg" alt="Event 1" class="event-img">
+            <div class="event-body">
+              <p class="event-meta">October 4, 2026 &bull; Yellow Brigade</p>
+              <h3> Distribution of Breakfast</h3>
+              <p class="time-loc"><i class="icon-clock-o"></i> 8:00AM – 11:0PM &nbsp; <i class="icon-map-o"></i> Near AIIMS Bhubansewar</p>
+              <p>Distributed breakfast to the attendees of the patients.</p>
+              <p>Special mention: Ms. Padmashree and Ms. Sashmita for donation and making the evenrt a success.</p>
+              <span class="event-badge event-badge-done">Completed</span>
+            </div>
+          </div>
+        </div>
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="event-card">
             <img src="images/naka_gate.png" alt="Event 1" class="event-img">
@@ -963,6 +1007,30 @@
         </div>
       </div>
 
+      <div id="supporters" class="supporters" role="region" aria-roledescription="carousel" aria-labelledby="supporters-heading">
+        <h3 id="supporters-heading">Thank You to Our Supporters</h3>
+        <p class="text-muted">Recognizing the kindness that makes our work possible</p>
+        <div class="supporter-stage" aria-live="off">
+          <!-- Add another supporter-slide here to recognize a new donation. -->
+          <article class="supporter-slide" role="group" aria-roledescription="slide" aria-label="1 of 2">
+            <span class="icon-heart" aria-hidden="true"></span>
+            <h4>Ms. Padmashree</h4>
+            <p>Donated money to support our work</p>
+          </article>
+          <article class="supporter-slide" role="group" aria-roledescription="slide" aria-label="2 of 2">
+            <span class="icon-heart" aria-hidden="true"></span>
+            <h4>Ms. Sashmita</h4>
+            <p>Donated money to support our work</p>
+          </article>
+        </div>
+        <div class="supporter-controls" hidden>
+          <button type="button" class="supporter-prev" aria-label="Previous supporter">&#8249; Previous</button>
+          <span class="supporter-count">1 / 2</span>
+          <button type="button" class="supporter-next" aria-label="Next supporter">Next &#8250;</button>
+          <button type="button" class="supporter-play">Pause slideshow</button>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1120,6 +1188,7 @@
   <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
   <script src="js/gallery-slideshow.js"></script>
+  <script src="js/supporter-slideshow.js"></script>
 
   <script>
     // Offset anchor scroll for fixed navbar
